@@ -14,102 +14,148 @@ $(document).ready(function () {
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
         success: function (d) {
             loader_stop()
-            //console.log(d);
+            console.log(d);
+            let intreres = ''
+            let jobss = ''
+            let stre = ''
 
-            $(d.person).each(function (i, v) {
-                $.each(v, function (j, v2) { 
-                    console.log(v2 +' ESPACIO '+j);
-                    
-                    html+=`<tr>
-                        <td>
-                            ${v2[j]}
-                        </td>   
-                        <td>
-                            ${v2}
-                        </td>
-                    </tr>` 
-                     
-                });
-                
+            $.each(d.strengths, function (i, v) { 
+                    stre +=`<tr>
+                    <td>
+                        Created: ${v.created}
+                    </td>
+                    <td>
+                        ${v.name}
+                    </td>
+                </tr>`
             });
+            $.each(d.interests, function (i, v) { 
+                    intreres +=`<tr>
+                    <td>
+                        ${v.name}
+                    </td>
+                    <td>
+                        ${v.created}
+                    </td>
+                </tr>`
+            });
+
+            $.each(d.experiences, function (i, v) { 
+                jobss +=`<tr>
+                   <td>
+                       ${v.name}
+                   </td>
+                   <td>
+                       ${v.responsibilities}
+                       
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       FROM ${v.fromMonth}/${v.fromYear}
+                   </td>
+                   <td>
+                     TO ${v.toMonth}/${v.toYear}
+                   </td>
+               </tr>
+               
+               `
+           });
+
+            html+=`<tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    ${d.person.name}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Location
+                </td>
+                <td>
+                    ${d.person.location.name}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Picture
+                </td>
+                <td>
+                    <img width="200px" src="${d.person.picture}">
+                </td>
+            </tr>
             
-            // $.each(d, function (i, v) { 
-            //     if(typeof v == 'object')
-            //     {
-            //         $.each(v, function (k, v2) { 
-            //            if(typeof v2 == 'object')
-            //            {
-            //                $.each(v2, function (j, v3) {
-            //                    if(typeof v3 == 'object')
-            //                    {    
-            //                        $.each(v3, function (l, v4) { 
-            //                            if(typeof v4 == 'object')
-            //                            {
-            //                                 $.each(v4, function (m, v5) { 
-            //                                     html+=`<tr>
-            //                                         <td>
-            //                                        v5
-            //                                         </td>   
-            //                                         <td>
-            //                                         ${v5}
-            //                                         </td>
-            //                                     </tr>` 
-            //                                 });
-            //                            }
-            //                            else
-            //                            {
-            //                                html+=`<tr>
-            //                                     <td>
-            //                                    v4
-            //                                     </td> 
-            //                                    <td>
-            //                                    ${v4}
-            //                                    </td>
-            //                                </tr>` 
-            //                            }
-            //                        });
-            //                    } 
-            //                    else{
+            <tr>
+                <td>
+                    Head Line
+                </td>
+                <td>
+                    ${d.person.professionalHeadline}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Summary
+                </td>
+                <td>
+                    ${d.person.summaryOfBio}
+                </td>
+            </tr>
+            <tr>
+            <td>
+                Education
+            </td>
+            <td>
+                ${d.education[0].name}
+            </td>
+            </tr>
+            <tr>
+                <td>
+                   Organization
+                </td>
+                <td>
+                   ${d.education[0].organizations[0].name}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   FROM ${d.education[0].fromYear}
+                </td>
+                <td>
+                    TO ${d.education[0].toYear}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <b>Interests</b>
+                  
+                </td>
+                <td>
+                    Created: ${intreres}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <b>Experience</b>
+                </td>
+                <td>
+                    ${jobss}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <b>Strengths</b>
+                </td>
+                <td>
+                    ${stre}
+                </td>
+            </tr>
+            `
 
-            //                        html+=`<tr>
-            //                             <td>
-            //                            v3
-            //                             </td> 
-            //                            <td>
-            //                            ${v3}
-            //                            </td>
-            //                        </tr>` 
-            //                    }
-            //                });
-            //            } 
-            //            else
-            //            {
-            //                html+=`<tr>
-            //                     <td>
-            //                     ${v}
-            //                     </td> 
-            //                     <td>
-            //                     ${v2}
-            //                     </td>
-            //                 </tr>`   
-            //            } 
-            //         });
 
-            //     }
-            //     else
-            //     {
-            //         tml+=`<tr>
-            //             <td>
-            //                 v1
-            //             </td> 
-            //             <td>
-            //             ${v}
-            //             </td>
-            //         </tr>` 
-                    
-            //     }
-            // });
-                           
+            
             $('#userData').html(html)
         },
         error:(e)=>{

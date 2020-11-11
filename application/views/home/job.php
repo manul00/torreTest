@@ -13,7 +13,10 @@
    <section class="row">    
         <section class="col-md-12 " style="overflow-x:auto;" >
             <table>
-                <thead >
+                <thead>
+                    <tr>
+                        <th  class="d-none " id="titleJobs"></th>
+                    </tr>
                 </thead>
                 <tbody id="jobData">
 

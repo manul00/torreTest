@@ -13,7 +13,7 @@ $(document).ready(function () {
          contentType: "application/x-www-form-urlencoded; charset=UTF-8",
          success: function (d) {
              loader_stop()
-            console.log(d);
+             $('#titleJobs').html(d.objective).removeClass('d-none')
             $.each(d.commitment, function (a, v) {
                 html += `<tr><td>${a}</td>
                     <td>${v}</td></tr>`
@@ -57,10 +57,13 @@ $(document).ready(function () {
                         <td>${v6}</td>
                     </tr>`
             });
-                   
-             $('#jobData').html(html)
+                
+            
+            $('#jobData').html(html)
+            
          },
          error:(e)=>{
+            $('#titleJobs').html('').addClass('d-none')
             if(e.status == 404)
             {
                 html+=`
@@ -78,8 +81,5 @@ $(document).ready(function () {
  
     $('#consult').on('click',()=>{
      searchJob() 
-    })
-     
-   
- 
+    })  
  });

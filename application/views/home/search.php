@@ -10,7 +10,6 @@
                 <option value="1">Jobs</option>
                 <option value="2">People</option>
             </select>
-            <!-- <input id="consult" class="btn btn-primary" type="button" value="Search" /><br /><br /> -->
         </form>
     </div>
    </section>

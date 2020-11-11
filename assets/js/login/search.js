@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    searchjob = (url,remote)=>{
+    searchjob = (url)=>{
         var html=''
      $.ajax({
          beforeSend:()=>{
@@ -92,22 +92,16 @@ $(document).ready(function () {
         loader_stop()
      });
     }
- 
     $('#Type').on('change',()=>{
-        let url = ''
         let remote = ''
         if($('#Type').val() == 1)
         {   
-            remote ='r'
             url='https://search.torre.co/opportunities/_search/?currency=USD%24&page=0&periodicity=hourly&lang=es&size=0&aggregate=true&offset=0'
         }
         else if($('#Type').val() == 2)
         {   
-
             url='https://search.torre.co/people/_search/?currency=USD%24&page=0&periodicity=hourly&lang=es&size=0&aggregate=true&offset=0'
         }
-        
-        
-        searchjob(url,remote) 
+        searchjob(url) 
     })
  });
