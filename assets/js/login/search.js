@@ -1,15 +1,33 @@
 $(document).ready(function () {
-    searchjob = ()=>{
-       
+    searchjob = (url)=>{
      $.ajax({
+         beforeSend:()=>{
+             loader_start()
+         },
          headers: {
-             'Access-Control-Allow-Origin': 'https://torre.co',
+            'Access-Control-Allow-Origin': 'https://torre.co',
+            'authority': 'search.torre.co',
+            'method': 'OPTIONS',
+            'path': '/people/_search/?currency=USD%24&page=0&periodicity=hourly&lang=es&size=0&aggregate=trueoffset=0',
+            'scheme': 'https',
+            'accept': '*/*',
+            ' accept-encoding': 'gzip, deflate, br',
+            'accept-language': 'es-419,es;q=0.9',
+            'access-control-request-headers': 'content-type',
+            'access-control-request-method': 'POST',
+            'origin': 'https://torre.co',
+            'referer': `https://torre.co/es/search/people?q=%28skill%2Frole%3A${$('#search').val()}.1%20or%20name%3A${$('#search').val()}%20or%20organization%3A${$('#search').val()}%29`,
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-site'
          },
          type: "POST",
-         url: "https://search.torre.co/opportunities/_search/?currency=USD%24&page=0&periodicity=hourly&lang=es&size=0&aggregate=true&offset=0"+$('#jobId').val(),
-         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+         url: url,
+         
          success: function (d) {
+             loader_stop()
              let html=''
+             $('#jobResult').html('')
              $.each(d, function (i, v) { 
                  
                  
@@ -89,19 +107,23 @@ $(document).ready(function () {
                  }
                   
              });
+              console.log(d);
                             
              $('#jobResult').html(html)
          }
+     })
+     .always(()=>{
+        loader_stop()
      });
     }
  
-    $('#search').on('change',()=>{
-        let url
-        if($('#Type').val() == 0)
+    $('#Type').on('change',()=>{
+        let url = ''
+        if($('#Type').val() == 1)
         {
             url='https://search.torre.co/opportunities/_search/?currency=USD%24&page=0&periodicity=hourly&lang=es&size=0&aggregate=true&offset=0'
         }
-        else
+        else if($('#Type').val() == 2)
         {
             url='https://search.torre.co/people/_search/?currency=USD%24&page=0&periodicity=hourly&lang=es&size=0&aggregate=true&offset=0'
         }

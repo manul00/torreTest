@@ -28,11 +28,12 @@
   document.asset_url = "<?= asset_url() ?>";
   document.views_url = "<?= views() ?>";
 
-  function loader_start(tag = '') {
-    
+  function loader_start() {
+    $('#loading').show();
   }
 
   function loader_stop(tag = '') {
+    $('#loading').hide();
   }
 
 </script>

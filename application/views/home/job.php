@@ -11,9 +11,12 @@
     </div>
    </section>
    <section class="row">    
-        <section class="col-md-12 " >
+        <section class="col-md-12 " style="overflow-x:auto;" >
             <table>
-                <thead>
+                <thead >
+                    <tr id="jobDataHead">
+
+                    </tr>
                     
                 </thead>
                 <tbody id="jobData">

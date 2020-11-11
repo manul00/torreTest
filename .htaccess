@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP} off
+RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteEngine on
+RewriteCond $1 !^(index.php|images|robots.txt|system|assets)
+RewriteRule ^(.*)$ index.php/$1 [L]

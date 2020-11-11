@@ -6,8 +6,9 @@
         <form action="/post" method="post">
             <input class="form-control" name="name" id="search" placeholder="Search a job..." /><br />
             <select  class="form-control"  name="" id="Type">
-                <option value="0">Jobs</option>
-                <option value="1">People</option>
+                <option selected disabled value="0">Select</option>
+                <option value="1">Jobs</option>
+                <option value="2">People</option>
             </select>
             <!-- <input id="consult" class="btn btn-primary" type="button" value="Search" /><br /><br /> -->
         </form>
@@ -27,4 +28,4 @@
    </section>
 </section>
 </section>
-<script src="<?= js_url_sin()?>login/jobs.js" type="text/javascript"></script>
+<script src="<?= js_url_sin()?>login/search.js" type="text/javascript"></script>

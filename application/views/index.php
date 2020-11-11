@@ -27,5 +27,9 @@
       <!-- ########## FINAL FOOTER ########## -->
     <!-- ########## FINAL DE CONTENIDO ########## -->
     <script src="<?= js_url_sin()?>masterpage.js"></script>
+    <div id="loading">
+      <img id="loading-image" src="<?= img_url()?>apple-icon.png" alt="Loading..." />
+      <h3 id="loading-text">Loading...</h3>
+    </div>
   </body>
 </html>
