@@ -47,26 +47,24 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <link href="<?= css_url_sin()?>custom.css" rel="stylesheet">
-
-
 <nav id="agregarClases" class="" color-on-scroll="400">
-    <div class="container">
-      <div class="dropdown button-dropdown">
-        <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
-          <span class="button-bar"></span>
-          <span class="button-bar"></span>
-          <span class="button-bar"></span>
-         
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li class="dropdown-header">Menu</li>
-          <li class="dropdown-item"id="home" >Home</li>
-          <li class="dropdown-item" id="bio" >BIO information</li>
-          <li class="dropdown-item" id="job"  >Job information</li>
-          <li class="dropdown-item" id="search" >Job search</li>
-        </div>
-      </div>
+  <div class="container">
+    <div class="dropdown button-dropdown">
+      <a href="#" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+        <span class="button-bar"></span>
+        <span class="button-bar"></span>
+        <span class="button-bar"></span>
       
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li class="dropdown-header">Menu</li>
+        <li class="dropdown-item"id="home" >Home</li>
+        <li class="dropdown-item" id="bio" >BIO information</li>
+        <li class="dropdown-item" id="job"  >Job information</li>
+        <li class="dropdown-item" id="search" >Search</li>
+      </div>
     </div>
-  </nav>
+    
+  </div>
+</nav>
   <!-- End Navbar -->

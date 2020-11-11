@@ -14,7 +14,6 @@ $(document).ready(function () {
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
         success: function (d) {
             loader_stop()
-            console.log(d);
             let intreres = ''
             let jobss = ''
             let stre = ''

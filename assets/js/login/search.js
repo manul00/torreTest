@@ -19,7 +19,6 @@ $(document).ready(function () {
          
          success: function (d) {
             loader_stop()
-            console.log(d);
             $('#totalJobs').html('Total '+d.total).removeClass('d-none')
             html+=`
             <tr>

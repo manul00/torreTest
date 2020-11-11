@@ -1,16 +1,10 @@
 <!--   Core JS Files   -->
 <script src="<?= js_url_sin()?>jquery.min.js" type="text/javascript"></script>
-<script src="<?= js_url_sin()?>popper.min.js" type="text/javascript"></script>
 <script src="<?= js_url_sin()?>bootstrap.min.js" type="text/javascript"></script>
 <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
 <script src="<?= js_url_sin()?>bootstrap-switch.js"></script>
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="<?= js_url_sin()?>nouislider.min.js" type="text/javascript"></script>
 <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-<script src="<?= js_url_sin()?>bootstrap-datepicker.js" type="text/javascript"></script>
-<!--  Google Maps Plugin    -->
 
-<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
 <script src="<?= js_url_sin()?>now-ui-kit.js?v=1.3.0" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
