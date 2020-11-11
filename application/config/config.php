@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+
+$config['base_url'] = 'http://localhost/base_production/';
 
 /*
 |--------------------------------------------------------------------------
@@ -521,3 +522,56 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+################### VARIABLES GLOBALES DEL BMS ###################
+/**
+ * Variables de correo
+ */
+    $config['correo_nombre'] = 'BMS - Area de soporte';    
+    $config['correo_cuenta'] = 'soportebms@grupoprogestion.com';
+    $config['correo_clave'] = '8Gp4Zh1waQ';
+    $config['correo_protocolo'] = 'smtp';
+    $config['correo_crypto'] = 'tls';
+    $config['correo_host'] = 'smtp.office365.com';
+    $config['correo_port'] = '587';
+/**
+ * Fin Variables de correo
+ */
+
+/**
+ * Integración con Captcha de Google
+ */
+$config['google_key']    = '6LcfeskZAAAAABJb3g1TsN2kabML2wl_ISfGNRPY';
+$config['google_secret'] = '6LcfeskZAAAAAJcjAL24N7indGsroi-wohddMcWD';
+
+$config['google_key_inv']    = '6LfOg8kZAAAAAAwM8hixqQQn2gPOUWalZkUREewb';
+$config['google_secret_inv'] = '6LfOg8kZAAAAAG8L7CPL-MsPH2HKp7OUhy4LNezu';
+/**
+* Fin Integración con Captcha de Google
+*/
+
+ /**
+ * Variable de APIBMS
+ */
+   
+   //$config['api_link'] = 'https://apiv2.bmspro.cl/bms/';
+   // $config['api_link'] = 'https://apibeta.bmspro.cl/bms/';
+   $config['api_link'] = 'http://localhost:4433/bms/';
+/**
+ * Fin ariable de APIBMS
+ */
+
+/**
+ * Variables de Seleccion y Remuneraciones
+ */
+    $config['tope_gratificacion'] = 126864;
+    $config['sueldo_minimo'] = 320500;
+    $config['porcentaje_calculo_grati'] = 0.25;
+/**
+ * Fin Variables de Seleccion y Remunreaciones
+ */
+################### FIN VARIABLES GLOBALES DEL BMS ###################
+
+
+
+
