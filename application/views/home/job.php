@@ -14,10 +14,6 @@
         <section class="col-md-12 " style="overflow-x:auto;" >
             <table>
                 <thead >
-                    <tr id="jobDataHead">
-
-                    </tr>
-                    
                 </thead>
                 <tbody id="jobData">
 

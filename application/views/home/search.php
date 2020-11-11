@@ -18,7 +18,9 @@
         <section class="col-md-12 " >
             <table>
                 <thead>
-                    
+                    <tr>
+                        <th  class="d-none " id="totalJobs"></th>
+                    </tr>
                 </thead>
                 <tbody id="jobResult">
 
