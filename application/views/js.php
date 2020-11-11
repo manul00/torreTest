@@ -20,18 +20,19 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" type="text/javascript">
-
-
 <script type="text/javascript">
 
   document.base_url = "<?= base_url() ?>";
+  document.img_url = "<?= img_url() ?>";
+  document.js_url = "<?= js_url_sin()?>";
+  document.asset_url = "<?= asset_url() ?>";
+  document.views_url = "<?= views() ?>";
 
-  function loader_start() {
-    $('#loading').show();
+  function loader_start(tag = '') {
+    
   }
 
   function loader_stop(tag = '') {
-    $('#loading').hide();
   }
 
 </script>

@@ -4,12 +4,9 @@
    <section class="row">
    <div class="col-md-12 ">
         <form action="/post" method="post">
-            <input class="form-control" name="name" id="search" placeholder="Search a job..." /><br />
-            <select  class="form-control"  name="" id="Type">
-                <option value="0">Jobs</option>
-                <option value="1">People</option>
-            </select>
-            <!-- <input id="consult" class="btn btn-primary" type="button" value="Search" /><br /><br /> -->
+            <input class="form-control" name="name" id="userName" placeholder="Username?..." /><br />
+            
+            <input id="consult" class="btn btn-primary" type="button" value="Search" /><br /><br />
         </form>
     </div>
    </section>
@@ -19,7 +16,7 @@
                 <thead>
                     
                 </thead>
-                <tbody id="jobResult">
+                <tbody id="userData">
 
                 </tbody>
             </table>
@@ -27,4 +24,4 @@
    </section>
 </section>
 </section>
-<script src="<?= js_url_sin()?>login/jobs.js" type="text/javascript"></script>
+<script src="<?= js_url_sin()?>login/bio.js" type="text/javascript"></script>

@@ -478,6 +478,10 @@ img-ser, figure-ser {
   font-weight: 900;
 }
 
+.title{
+  color:white;
+}
+
 .pt-1, .py-1 {
   padding-top: .25rem !important;
 }

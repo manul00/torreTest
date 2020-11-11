@@ -1,14 +1,23 @@
-<?php
-//   if(!$this->session->userdata('usu_id')) { header("Location: ".base_url());
-// $this->session->unset_userdata('vis_id'); ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
   <?php $this->load->view('head'); ?>
   </head>
   <body>
- 
-    <!-- ########## CONTEND ########## -->
+    <!-- ########## MENU ########## -->
+    <?php //$this->load->view('layout/menu'); ?>
+    <!-- ########## FINAL DEL MENU ########## -->
+
+    <!-- ########## TOP HEADER ########## -->
+    <?php //$this->load->view('layout/top_menu'); ?>
+    <!-- ########## FINAL DEL TOP HEADER ########## -->
+
+    <!-- ########## PANEL DE OPCIONES ADICIONALES ########## -->
+    <?php //$this->load->view('layout/options'); ?>
+    <!-- ########## FINAL PANEL DE OPCIONES ADICIONALES ########## --->
+
+    
+    <!-- ########## CONTENIDO ########## -->
     <div class="" id="contenido-local">
       
       </div>
@@ -17,10 +26,6 @@
       <?php $this->load->view('footer'); ?>
       <!-- ########## FINAL FOOTER ########## -->
     <!-- ########## FINAL DE CONTENIDO ########## -->
-    <script src="./assets/js/masterpage.js"></script>
-    <!-- <div id="loading">
-      <img id="loading-image" src="<?= img_url()?>apple-icon.png" alt="Loading..." />
-      <h3 id="loading-text">Loading...</h3>
-    </div> -->
+    <script src="<?= js_url_sin()?>masterpage.js"></script>
   </body>
 </html>

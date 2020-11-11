@@ -1,40 +1,30 @@
-$(document).ready(function (e) {
+$(document).ready(function () {
 
-cargar_home = ()=>{
+load_home = ()=>{
   $.ajax({
     beforeSend:()=>{$('#contenido-local').html('')},
     type: "POST",
-    url: document.base_url+"home/cargar_home",
+    url: document.base_url+"home/load_home",
     success: function (d) {
-      let res = $.parseJSON(d)
+      // let res = $.parseJSON(d)
+         // console.log(d);
           
-      $('#contenido-local').html(res);
+      $('#contenido-local').html(d);
       $('#agregarClases').addClass('navbar navbar-expand-lg bg-primary fixed-top navbar-transparent')
     }
   })
-  .done(()=>{
-    
-
-  /*   $(document).scroll(()=>{
-      var bav= $('nav').offset();
-    if(bav.top > 150)
-    {
-      
-    }  
-      console.log(bav);
-    }) */
-  });
 }
 
-cargar_login = ()=>{
+
+load_search = ()=>{
   $.ajax({
     beforeSend:()=>{$('#contenido-local').html('')},
     type: "POST",
-    url: document.base_url+"home/cargar_login",
+    url: document.base_url+"home/load_search",
     success: function (d) {
-      let res = $.parseJSON(d)
+      //let res = $.parseJSON(d)
           
-      $('#contenido-local').html(res);
+      $('#contenido-local').html(d);
       $('#agregarClases').addClass('bg-primary')
       $('#agregarClases').removeClass('navbar navbar-expand-lg fixed-top navbar-transparent')
       $('#navbarDropdown').css('padding-top','30px')
@@ -42,31 +32,15 @@ cargar_login = ()=>{
   });
 }
 
-cargar_contact = ()=>{
+load_job = ()=>{
   $.ajax({
     beforeSend:()=>{$('#contenido-local').html('')},
     type: "POST",
-    url: document.base_url+"home/cargar_contact",
+    url: document.base_url+"home/load_job",
     success: function (d) {
-      let res = $.parseJSON(d)
+      //let res = $.parseJSON(d)
           
-      $('#contenido-local').html(res);
-      $('#agregarClases').addClass('bg-primary')
-      $('#agregarClases').removeClass('navbar navbar-expand-lg fixed-top navbar-transparent')
-      $('#navbarDropdown').css('padding-top','30px')
-    }
-  });
-}
-
-cargar_aboutus = ()=>{
-  $.ajax({
-    beforeSend:()=>{$('#contenido-local').html('')},
-    type: "POST",
-    url: document.base_url+"home/cargar_aboutus",
-    success: function (d) {
-      let res = $.parseJSON(d)
-          
-      $('#contenido-local').html(res);
+      $('#contenido-local').html(d);
       $('#agregarClases').addClass('bg-primary')
       $('#agregarClases').removeClass('navbar navbar-expand-lg fixed-top navbar-transparent')
       $('#navbarDropdown').css('padding-top','30px')
@@ -75,15 +49,15 @@ cargar_aboutus = ()=>{
 }
 
 
-cargar_services = ()=>{
+load_bio = ()=>{
   $.ajax({
     beforeSend:()=>{$('#contenido-local').html('')},
     type: "POST",
-    url: document.base_url+"home/cargar_services",
+    url: document.base_url+"home/load_bio",
     success: function (d) {
-      let res = $.parseJSON(d)
+      let re//s = $.parseJSON(d)
           
-      $('#contenido-local').html(res);
+      $('#contenido-local').html(d);
       $('#agregarClases').addClass('bg-primary')
       $('#agregarClases').removeClass('navbar navbar-expand-lg fixed-top navbar-transparent')
       $('#navbarDropdown').css('padding-top','30px')
@@ -91,63 +65,26 @@ cargar_services = ()=>{
   });
 }
 
-cargar_myaccount = ()=>{
-  $.ajax({
-    beforeSend:()=>{$('#contenido-local').html('')},
-    type: "POST",
-    url: document.base_url+"home/cargar_myaccount",
-    success: function (d) {
-      let res = $.parseJSON(d)
-          
-      $('#contenido-local').html(res);
-      $('#agregarClases').addClass('bg-primary')
-      $('#agregarClases').removeClass('navbar navbar-expand-lg fixed-top navbar-transparent')
-      $('#navbarDropdown').css('padding-top','30px')
-    }
-  });
-}
-
-$('#myaccount').on('click',()=>{
-  cargar_myaccount()
+$('#bio').on('click',()=>{
+  load_bio()
 })
 
-$('#services').on('click',()=>{
-  cargar_services()
+$('#job').on('click',()=>{
+  load_job()
 })
 
-$('#aboutus').on('click',()=>{
-  cargar_aboutus()
+$('#search').on('click',()=>{
+  load_search()
 })
 
-$('#contact').on('click',()=>{
-  cargar_contact()
-})
-
-$('#login').on('click',()=>{
-  cargar_login()
-})
 
 $('#home').on('click',()=>{
-  cargar_home()
+  load_home()
 })
 
-cargar_home()
+load_home()
 
-cerrarSesion = ()=>
-{
-    $.ajax({
-        type: "POST",
-        url: document.base_url+"login/logout",
-        success: function (d) {
-           
-           location.reload()
-        }
-    });
-}
 
-$('#logout').on('click',()=>{
-    cerrarSesion()
-})
 
 
  

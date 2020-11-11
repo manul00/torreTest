@@ -18,7 +18,7 @@ qr-decoder (qrcodelib.js) -> https://github.com/LazarSoft/jsqrcode
 		camera = $('<video style="position:absolute;visibility:hidden;display: none;">')[0],
 		flipped = false,
 		isStreaming = false,
-		DecodeWorker = new Worker(document.base_url+"assets/js/DecoderWorker.js"),
+		DecodeWorker = new Worker(document.+"assets/js/DecoderWorker.js"),
 		delay = false,
 		pluginName = "WebCodeCam",
 		defaults = {
@@ -34,7 +34,7 @@ qr-decoder (qrcodelib.js) -> https://github.com/LazarSoft/jsqrcode
 			flipVertical: false,
 			flipHorizontal: false,
 			zoom: -1,
-			beep: document.base_url+"assets/js/beep.mp3",
+			beep: document.+"assets/js/beep.mp3",
 			brightness: 0,
 			autoBrightnessValue: false,
 			grayScale: false,

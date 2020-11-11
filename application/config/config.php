@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://localhost/base_production/';
+$config['base_url'] = 'http://localhost/torre/';
+// $config['base_url'] = 'https://torretest.giraffema.com/manul00/';
 
 /*
 |--------------------------------------------------------------------------
