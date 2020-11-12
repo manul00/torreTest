@@ -1,0 +1,29 @@
+Removed unnecessary JS and CSS
+
+
+ 
+Bio information showed in order
+
+
+ 
+listed Jobs for types and more details
+
+
+ 
+the necesarry controller's where added
+
+
+ 
+htaccess added, views and Js to Ajax's call
+(Added CSS and JS files for the theme, improved the frontend with styles and functions)
+
+ 
+Navigation system 
+(The WEB simulate a SPA loading dynamiclly the content of the pages)
+
+ 
+added Codeigneiter structure
+
+
+ 
+Initial commit
